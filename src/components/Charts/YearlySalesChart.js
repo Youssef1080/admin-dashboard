@@ -1,7 +1,7 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 
-const PieComponent = () => {
+const YearlySalesChart = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
   const arr = [
@@ -15,19 +15,11 @@ const PieComponent = () => {
   ];
 
   const data = {
-    labels: [
-      "Labour",
-      "Legal",
-      "Production",
-      "License",
-      "Facilities",
-      "Taxes",
-      "Insurance"
-    ],
+    labels: ["sale1", "sale2", "sale3", "sale4"],
     datasets: [
       {
-        label: "# of Votes",
-        data: [18, 8, 15, 11, 18, 14, 16],
+        // label: "# of Votes",
+        data: [25, 15, 35, 25],
         backgroundColor: [
           "#05807d",
           "#0b0c0c",
@@ -38,10 +30,10 @@ const PieComponent = () => {
           "#ff88dd"
         ],
         borderColor: [
-          "#05807d",
-          "#0b0c0c",
-          "#3169f8",
-          "#f52575",
+          "black",
+          "black",
+          "black",
+          "black",
           "#fcb069",
           "#078b2c",
           "#ff88dd"
@@ -50,7 +42,23 @@ const PieComponent = () => {
       }
     ]
   };
-  return <Pie data={data} />;
+  return (
+    <Pie
+      data={data}
+      options={{
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+            position: "bottom"
+          }
+        }
+      }}
+      //   width={600} height={600}
+      //
+      //
+    />
+  );
 };
 
-export default PieComponent;
+export default YearlySalesChart;

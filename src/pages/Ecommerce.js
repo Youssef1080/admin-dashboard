@@ -13,8 +13,17 @@ import {
   SparklineAreaData,
   ecomPieChartData
 } from "../data/dummy";
+// import LineChart from "../components/import";
 import loly from "../data/product9.jpg";
-import { SparkLine, Stacked } from "../components/import";
+import {
+  LineChart,
+  SparkLine,
+  Stacked,
+  PieComponent,
+  SalesOverviewChart,
+  WeeklyStatsChart,
+  YearlySalesChart
+} from "../components/import";
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -156,7 +165,7 @@ const Ecommerce = () => {
           </div>
         </div>
 
-        <div style={{ width: "380px" }}>
+        <div style={{ width: "480px" }}>
           <div
             style={{ backgroundColor: currentColor }}
             className="p-4  text-white rounded-lg pt-6 m-4"
@@ -168,20 +177,23 @@ const Ecommerce = () => {
                 <p className="text-gray-300 mt-1">Monthly revenue</p>
               </div>
             </div>
-            {/* column */}
+            <LineChart />
           </div>
 
           <div
             className="bg-white dark:bg-secondary-dark-bg 
-            flex p-12 rounded-lg mt-3 m-4 dark:text-white"
+            flex p-12 rounded-lg mt-3 m-4 dark:text-white justify-between items-center"
           >
             <div>
               <p className="text-2xl font-semibold">$43,246</p>
               <p className="text-gray-300 mt-1">Yearly sales</p>
             </div>
+            <div className="w-24 h-24">
+              <YearlySalesChart />
+            </div>
           </div>
         </div>
-        {/*  */}
+        {/* {} */}
       </div>
 
       <div className="flex flex-wrap justify-center gap-10 mt-5">
@@ -248,7 +260,7 @@ const Ecommerce = () => {
               <option>3</option>
             </select> */}
           </div>
-          {/* column */}
+          <SalesOverviewChart width={"600px"} />
         </div>
         {/*  */}
       </div>
@@ -260,7 +272,7 @@ const Ecommerce = () => {
         >
           <div className="flex items-center justify-between">
             <p className="text-xl font-semibold mb-8">Weekly Stats</p>
-            <IoIosMore />
+            <IoIosMore className="mb-8" />
           </div>
           {weeklyStats.map((item) => (
             <div
@@ -268,7 +280,7 @@ const Ecommerce = () => {
               className="flex justify-between items-center mb-3"
             >
               <button
-                className="rounded-full p-4 hover:drop-shadow-lg text-xl"
+                className="rounded-full p-4 hover:drop-shadow-lg text-xl "
                 style={{ backgroundColor: item.iconBg }}
               >
                 {item.icon}
@@ -280,7 +292,7 @@ const Ecommerce = () => {
               <span className={`text-${item.pcColor}`}>{item.amount}</span>
             </div>
           ))}
-          {/* column */}
+          <WeeklyStatsChart />
         </div>
 
         <div
@@ -289,7 +301,7 @@ const Ecommerce = () => {
         >
           <div className="flex items-center justify-between ">
             <p className="text-xl font-semibold mb-8">MedicalPro Branding</p>
-            <IoIosMore />
+            <IoIosMore className="mb-8" />
           </div>
           <button className="mb-8 hover:drop-shadow-xl bg-orange-400 text-sm text-gray-300 rounded-xl p-1">
             16 APR, 2021
@@ -351,7 +363,7 @@ const Ecommerce = () => {
         >
           <div className="flex items-center justify-between dark:text-white">
             <p className="text-xl font-semibold mb-8">Daily Activities</p>
-            <IoIosMore />
+            <IoIosMore className="mb-8" />
           </div>
           <img src={loly} />
           <div className="mt-10">

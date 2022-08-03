@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import React, { useCallback, useState } from "react";
+import { PieComponent } from "../../components/import";
 import { PieChart, Pie, Cell } from "recharts";
 
 const data = [
@@ -41,7 +42,7 @@ export default function PiePage() {
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl w-fit">
       <Header category="Page" title="Pie Chart" />{" "}
-      <PieChart width={400} height={400}>
+      {/* <PieChart width={400} height={400}>
         <Pie
           data={data}
           cx={200}
@@ -56,7 +57,8 @@ export default function PiePage() {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-      </PieChart>
+      </PieChart> */}
+      <PieComponent />
     </div>
   );
 }

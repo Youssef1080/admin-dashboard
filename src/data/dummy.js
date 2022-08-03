@@ -572,23 +572,23 @@ export const links = [
       {
         name: "pie",
         icon: <FiPieChart />
-      },
-      {
-        name: "financial",
-        icon: <RiStockLine />
-      },
-      {
-        name: "color-mapping",
-        icon: <BsBarChart />
-      },
-      {
-        name: "pyramid",
-        icon: <GiLouvrePyramid />
-      },
-      {
-        name: "stacked",
-        icon: <AiOutlineBarChart />
       }
+      // {
+      //   name: "financial",
+      //   icon: <RiStockLine />
+      // },
+      // {
+      //   name: "color-mapping",
+      //   icon: <BsBarChart />
+      // },
+      // {
+      //   name: "pyramid",
+      //   icon: <GiLouvrePyramid />
+      // },
+      // {
+      //   name: "stacked",
+      //   icon: <AiOutlineBarChart />
+      // }
     ]
   }
 ];

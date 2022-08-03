@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   const normalLink = ` pl-4 pb-2.5 pt-3 m-2 flex items-center gap-5 rounded-lg 
     text-white text-md text-gray-700 dark:text-gray-200 
-    dark:hover::text-black hover:bg-light-gray`;
+    dark:hover::text-black hover:bg-black hover:text-white`;
 
   function handleClose() {
     if (screenSize <= 900) {
@@ -35,10 +35,10 @@ const Sidebar = () => {
             dark:text-white tracking-tight text-slate-900"
               onClick={handleClose}
             >
-              <SiShopware /> <span>Shoppy</span>
+              <SiShopware /> <span>Dashboard</span>
             </Link>
             <button
-              className="text-xl p-3 mt-4 hover:bg-light-gray rounded-full
+              className="text-xl p-3 mt-4  rounded-full
             block md:hidden"
               onClick={() => setActiveMenu(false)}
             >

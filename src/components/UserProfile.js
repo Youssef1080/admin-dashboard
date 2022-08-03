@@ -24,7 +24,7 @@ const UserProfile = () => {
       <div className="flex gap-6 mt-6 mb-6">
         <img src={img} className="rounded-full w-16 h-16" />
         <div>
-          <p className="text-lg font-semibold">Mr Milk</p>
+          <p className="text-lg font-semibold">Mr Roman</p>
           <p className="text-sm text-gray-400 ">Administrator</p>
           <p className="text-gray-400 font-semibold">info@shop.com</p>
         </div>

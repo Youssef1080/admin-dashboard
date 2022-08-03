@@ -12,7 +12,7 @@ const Notifications = () => {
       className="absolute  bg-white top-12 p-6 m-2 rounded-xl dark:text-white dark:bg-secondary-dark-bg"
     >
       <div className="flex items-center justify-between">
-        <p className="font-semibold text-lg">Messages</p>
+        <p className="font-semibold text-lg">Notifications</p>
         <button
           onClick={() => setIsClicked({ ...isClicked, notification: false })}
           className="hover:bg-slate-300 p-3 rounded-full text-2xl font-bold text-gray-400"
