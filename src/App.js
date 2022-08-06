@@ -22,6 +22,7 @@ import {
 } from "./pages/import";
 import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
   const {
@@ -29,8 +30,19 @@ function App() {
     activeSettings,
     setActiveSettings,
     currentColor,
-    currentMode
+    currentMode,
+    setCurrentColor,
+    setCurrentMode
   } = useStateContext();
+
+  useEffect(() => {
+    const color = localStorage.getItem("colorMode");
+    const theme = localStorage.getItem("themeMode");
+    if (color && theme) {
+      setCurrentColor(color);
+      setCurrentMode(theme);
+    }
+  }, []);
 
   return (
     <div className={currentMode === "Dark" ? "dark" : ""}>

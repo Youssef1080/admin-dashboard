@@ -57,7 +57,7 @@ const Navbar = () => {
   }, [screenSize]);
 
   return (
-    <div className="flex md:mx-6 justify-between p-2 relative">
+    <div className="flex md:mx-6 justify-between p-2 relative ">
       <NavButton
         title={"Menu"}
         func={() => setActiveMenu(!activeMenu)}
